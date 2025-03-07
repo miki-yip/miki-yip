@@ -1,12 +1,16 @@
-- 👋 Hi, I’m @miki-yip
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-<!---
-miki-yip/miki-yip is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+```mermaid
+graph TD;
+    A[研究基础: 深圳市老年相关疾病队列] -->|数据收集| B[人口学信息、生活方式、健康状况]
+    A -->|光污染量化| C[VIIRS遥感 + GIS分析]
+    B --> D[数据清洗 & 匹配]
+    C --> D
+    D -->|认知功能评估| E[Mini-Cog量表]
+    E --> F[单因素分析: 光污染 vs 认知功能]
+    D --> F
+    F --> G[多模型评估: RCS 限制性立方样条]
+    F --> H[多元逻辑回归 + 随机森林]
+    G --> I[交互作用分析: 年龄、PQSI、性别、教育水平]
+    H --> I
+    I --> J[中介效应分析: Bootstrap + 分子标志物]
+    J --> K[因果路径分析: 结构方程模型(SEM)]
+    K --> L[研究结果: 政策建议 & 未来研究方向]
